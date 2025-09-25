@@ -1,0 +1,37 @@
+{
+  "name": "megapot-sdk",
+  "version": "1.0.0",
+  "description": "MegaPot SDK for managing spend permissions, allowances, and lottery ticket purchases",
+  "keywords": [
+    "megapot",
+    "lottery",
+    "blockchain",
+    "base",
+    "spend-permissions",
+    "sdk"
+  ],
+  "license": "MIT",
+  "author": "MegaPot Team",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx --watch index.ts",
+    "lint": "cd ../.. && yarn eslint examples/megapot-sdk",
+    "prepublishOnly": "npm run build",
+    "test": "tsx tests/test.ts"
+  },
+  "dependencies": {
+    "@base-org/account": "^2.2.0",
+    "axios": "^1.6.0",
+    "viem": "^2.22.17"
+  },
+  "devDependencies": {
+    "tsx": "*",
+    "typescript": "*"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
